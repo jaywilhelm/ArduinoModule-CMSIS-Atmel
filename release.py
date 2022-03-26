@@ -4,7 +4,7 @@ import glob
 
 VERSION = "1.2.0"
 ROOT_PROJECT_DIRNAME = "CMSIS-Atmel"
-
+FILENAME = ROOT_PROJECT_DIRNAME+"_etag_"+VERSION+".tar.bz2"
 fileNames = os.listdir(ROOT_PROJECT_DIRNAME)
 
 fileList = glob.glob("*.tar.bz2")
@@ -18,7 +18,7 @@ for efile in fileList:
 
 print(fileNames)
 
-tar = tarfile.open(ROOT_PROJECT_DIRNAME+VERSION+".tar.bz2", "w:bz2")
+tar = tarfile.open(FILENAME, "w:bz2")
 for name in fileNames:
     tar.add(ROOT_PROJECT_DIRNAME+"/" + name)
 tar.close()
@@ -27,7 +27,7 @@ tar.close()
 import hashlib
 BLOCKSIZE = 65536
 hasher = hashlib.sha256()
-with open(ROOT_PROJECT_DIRNAME+VERSION+'.tar.bz2', 'rb') as afile:
+with open(FILENAME, 'rb') as afile:
     buf = afile.read(BLOCKSIZE)
     while len(buf) > 0:
         hasher.update(buf)
@@ -35,15 +35,15 @@ with open(ROOT_PROJECT_DIRNAME+VERSION+'.tar.bz2', 'rb') as afile:
 checksum = hasher.hexdigest()
 print(checksum)
 
-fileSize = os.path.getsize(ROOT_PROJECT_DIRNAME+VERSION+'.tar.bz2')
+fileSize = os.path.getsize(FILENAME)
 print(fileSize)
 
 
 jtemp = open("jsontemplate.txt","r")
 jtempstr = jtemp.read()
 jtemp.close()
-URL = "https://github.com/jaywilhelm/ArduinoModule-CMSIS-Atmel/releases/download/etag-v"+VERSION+"/"+ROOT_PROJECT_DIRNAME+VERSION+".tar.bz2"
-FILENAME = ROOT_PROJECT_DIRNAME+VERSION+".tar.bz2"
+URL = "https://github.com/jaywilhelm/ArduinoModule-CMSIS-Atmel/releases/download/etag-v"+VERSION+"/"+FILENAME
+
 
 jtempstr = jtempstr.replace("$URL$",URL)
 jtempstr = jtempstr.replace("$FILENAME$",FILENAME)
