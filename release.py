@@ -47,7 +47,7 @@ URL = "https://github.com/jaywilhelm/ArduinoModule-CMSIS-Atmel/releases/download
 
 jtempstr = jtempstr.replace("$URL$",URL)
 jtempstr = jtempstr.replace("$FILENAME$",FILENAME)
-jtempstr = jtempstr.replace("$VERSION$",checksum)
+jtempstr = jtempstr.replace("$VERSION$",VERSION)
 jtempstr = jtempstr.replace("$SHA$",checksum)
 jtempstr = jtempstr.replace("$SIZE$",str(fileSize) )
 
