@@ -102,7 +102,8 @@
 
 /* SAMD21 series */
 #define SAMD21J17 ( \
-    part_is_defined( SAMD21J17A ) )
+    part_is_defined( SAMD21J17A ) || \
+	part_is_defined( SAMD21J17D ) )
 
 #define SAMD21G17A ( \
     part_is_defined( SAMD21G17AU ) )

@@ -113,6 +113,8 @@
 #include "samd21/include/samd21.h"
 #elif defined (__SAMD21J17A__)
 #include "samd21/include/samd21.h"
+#elif defined (__SAMD21J17D__)
+#include "samd21/include/samd21.h"
 #elif defined (__SAMD21J18A__)
 #include "samd21/include/samd21.h"
 #elif defined (__SAMD21J16B__)
