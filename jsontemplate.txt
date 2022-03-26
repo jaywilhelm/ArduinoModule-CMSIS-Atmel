@@ -1,0 +1,21 @@
+		{
+		  "name": "CMSIS-Atmel-ETAG",
+          "version": "$VERSION$",
+          "systems":
+          [
+            {
+              "host": "arm-linux-gnueabihf",
+              "url": "$URL$",
+              "archiveFileName": "$FILENAME$",
+              "checksum": "SHA-256:$SHA$",
+              "size": "$SIZE$"
+            },
+			{
+              "host": "all",
+              "url": "$URL$",
+              "archiveFileName": "$FILENAME$",
+              "checksum": "SHA-256:$SHA$",
+              "size": "$SIZE$"
+            }
+		  ]
+		}
