@@ -2,7 +2,7 @@ import tarfile
 import os
 import glob
 
-VERSION = "1.0.0"
+VERSION = "1.2.0"
 ROOT_PROJECT_DIRNAME = "CMSIS-Atmel"
 
 fileNames = os.listdir(ROOT_PROJECT_DIRNAME)
