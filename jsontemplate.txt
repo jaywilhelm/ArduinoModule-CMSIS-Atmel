@@ -1,20 +1,48 @@
 		{
-		  "name": "CMSIS-Atmel-ETAG",
+          "name": "CMSIS-Atmel-ETAGRFID",
           "version": "$VERSION$",
           "systems":
           [
             {
+              "host": "i686-mingw32",
+              "url": "$URL$",
+              "archiveFileName": "$FILENAME$",
+              "SHA": "SHA-256:$SHA$",
+              "size": "$SIZE$"
+            },
+            {
+              "host": "x86_64-apple-darwin",
+              "url": "$URL$",
+              "archiveFileName": "$FILENAME$",
+              "SHA": "SHA-256:$SHA$",
+              "size": "$SIZE$"
+            },
+            {
+              "host": "x86_64-pc-linux-gnu",
+              "url": "$URL$",
+              "archiveFileName": "$FILENAME$",
+              "SHA": "SHA-256:$SHA$",
+              "size": "$SIZE$"
+            },
+            {
+              "host": "i686-pc-linux-gnu",
+              "url": "$URL$",
+              "archiveFileName": "$FILENAME$",
+              "SHA": "SHA-256:$SHA$",
+              "size": "$SIZE$"
+            },
+            {
               "host": "arm-linux-gnueabihf",
               "url": "$URL$",
               "archiveFileName": "$FILENAME$",
-              "checksum": "SHA-256:$SHA$",
+              "SHA": "SHA-256:$SHA$",
               "size": "$SIZE$"
             },
-			{
+            {
               "host": "all",
               "url": "$URL$",
               "archiveFileName": "$FILENAME$",
-              "checksum": "SHA-256:$SHA$",
+              "SHA": "SHA-256:$SHA$",
               "size": "$SIZE$"
             }
 		  ]
